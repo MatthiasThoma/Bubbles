@@ -38,18 +38,37 @@ class BubbleSortTest {
         Assertions.assertArrayEquals(controlSingle, single);
     }
 
-    /*
-    @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // zwei gleiche Nummern im Array sind.
+
+    @Test
+    void sameNumber(){
+        int [] same = {3,4,2,4,1,5};
+        BubbleSort.sort(same);
+        int [] controlSame = {1,2,3,4,4,5};
+        Assertions.assertArrayEquals(controlSame, same);
     }
 
-    @org.junit.jupiter.api.AfterEach
-    void tearDown() {
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // nur gleiche Nummern im Array sind.
+    @Test
+    void    pureNumbers(){
+        int [] pure = {2,2,2,2,2,2,2};
+        BubbleSort.sort(pure);
+        int [] controlPure = {2,2,2,2,2,2,2};
+        Assertions.assertArrayEquals(controlPure, pure);
     }
 
-    @org.junit.jupiter.api.Test
-    void sort() {
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // große Nummern im Array sind.
+    @Test
+    void bigNumbers(){
+        int [] big = {123456, 654321, 24680, 987654321};
+        BubbleSort.sort(big);
+        int [] controlBig = {24680, 123456, 654321, 987654321};
+        Assertions.assertArrayEquals(controlBig, big);
     }
 
-     */
+
 }
