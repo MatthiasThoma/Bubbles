@@ -14,6 +14,9 @@ class BubbleSortTest {
 
      */
 
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
+    // keine Zahlen im Array sind.
+
     @Test
     void emptyArray(){
         int [] empty = {};
@@ -22,6 +25,9 @@ class BubbleSortTest {
         Assertions.assertArrayEquals(controlEmpty, empty);
     }
 
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
+    // bestimmte Nummern im Array sind.
+
     @Test
     void presetArray(){
         int [] preset = {9, 8, 7, 6, 5 };
@@ -29,6 +35,9 @@ class BubbleSortTest {
         int [] controlPreset = {5, 6, 7, 8, 9};
         Assertions.assertArrayEquals(controlPreset, preset);
     }
+
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
+    // eine einzige Nummer im Array ist.
 
     @Test
     void singleArray(){
