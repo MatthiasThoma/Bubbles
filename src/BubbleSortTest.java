@@ -39,7 +39,7 @@ class BubbleSortTest {
     }
 
 
-    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
     // zwei gleiche Nummern im Array sind.
 
     @Test
@@ -50,7 +50,7 @@ class BubbleSortTest {
         Assertions.assertArrayEquals(controlSame, same);
     }
 
-    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
     // nur gleiche Nummern im Array sind.
     @Test
     void    pureNumbers(){
@@ -60,7 +60,7 @@ class BubbleSortTest {
         Assertions.assertArrayEquals(controlPure, pure);
     }
 
-    // Sinnvoll um zu Testen wie sich der BubbleSort verhält wenn
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
     // große Nummern im Array sind.
     @Test
     void bigNumbers(){
@@ -68,6 +68,17 @@ class BubbleSortTest {
         BubbleSort.sort(big);
         int [] controlBig = {24680, 123456, 654321, 987654321};
         Assertions.assertArrayEquals(controlBig, big);
+    }
+
+    // Sinnvoll um zu Testen wie sich der BubbleSort verhält, wenn
+    // negative Nummern im Array sind.
+
+    @Test
+    void negativeNumbers(){
+        int [] negative = {-2, -5, -6, -1, -9};
+        BubbleSort.sort(negative);
+        int [] controlNegative = {-9, -6, -5, -2, -1};
+        Assertions.assertArrayEquals(controlNegative, negative);
     }
 
 
